@@ -7,16 +7,31 @@ const router = new VueRouter({
   mode: "history",
   base: import.meta.env.BASE_URL,
   routes: [
+    // {
+    //   path: "/",
+    //   name: "home",
+    //   component: () => import("../views/HomeView.vue"),
+    // },
     {
       path: "/",
-      name: "home",
-      component: () => import("../views/HomeView.vue"),
-    },
-    {
-      path: "/dashboard",
       name: "dashboard",
       component: () => import("../views/Dashboard.vue"),
-
+    },
+    {
+      path: "/booking",
+      name: "booking",
+      component: () => import("../views/Profile.vue"),
+      // meta: {
+      //   requiresAuth: true,
+      // },
+    },
+    {
+      path: "/billing",
+      name: "billing",
+      component: () => import("../views/Profile.vue"),
+      // meta: {
+      //   requiresAuth: true,
+      // },
     },
     {
       path: "/profile",

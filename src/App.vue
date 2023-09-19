@@ -1,22 +1,26 @@
 <template>
   <div id="app">
-    <NavBar />
+    <Sidebar />
     <router-view />
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
+import Sidebar from "./components/Sidebar.vue";
 export default {
   name: "App",
   components: {
-    NavBar,
+    Sidebar,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  color: $brand-color-1;
+#app {
+  display: flex;
+  main {
+    flex: 1 1 0;
+    padding: 26px;
+  }
 }
 </style>
