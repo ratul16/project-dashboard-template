@@ -210,7 +210,7 @@ export default {
       object-position: top;
       border-radius: 50%;
       z-index: 4;
-      top: 100px;
+      top: 80px;
       right: 10px;
     }
     .info {
