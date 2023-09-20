@@ -1,7 +1,7 @@
 <template>
-  <main class="dashboard">
+  <div class="dashboard">
     <h1>Dashboard</h1>
-  </main>
+  </div>
 </template>
 
 <script>

@@ -1,15 +1,14 @@
 <template>
-  <main>
+  <div>
     <h1>Home</h1>
-  </main>
+  </div>
 </template>
 
 <script>
-  export default {
-    name:"HomeView"
-  }
+export default {
+  name: "HomeView",
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>

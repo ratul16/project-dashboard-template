@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar shadow-sm" :class="toggle ? 'expanded' : ''">
+  <aside class="sidebar shadow-sm" :class="isVisible ? 'expanded' : ''">
     <div class="logo" @click="toggleSidebar()">
       <img src="@/assets/images/logo.png" alt="" srcset="" />
       <h5 class="item-text mb-0">Dashboard</h5>
@@ -36,6 +36,12 @@
 <script>
 export default {
   name: "Sidebar",
+  props: {
+    isVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       toggle: false,
@@ -62,6 +68,7 @@ export default {
   overflow: hidden;
   border-radius: 0 15px 15px 0;
   // border: 1px solid $border-variant-4;
+  font-size: 14px;
 
   .logo {
     display: flex;
@@ -124,10 +131,10 @@ export default {
   }
 }
 
-@include media-queries("tab-sm") {
-  .sidebar {
-    position: absolute;
-    z-index: 99;
-  }
-}
+// @include media-queries("tab-sm") {
+//   .sidebar {
+//     position: absolute;
+//     z-index: 99;
+//   }
+// }
 </style>
