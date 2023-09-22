@@ -20,7 +20,7 @@ const router = new VueRouter({
     {
       path: "/booking",
       name: "booking",
-      component: () => import("../views/Profile.vue"),
+      component: () => import("../views/BookingView.vue"),
       // meta: {
       //   requiresAuth: true,
       // },

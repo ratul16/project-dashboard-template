@@ -1,13 +1,19 @@
 <template>
   <div class="dashboard">
-    <StatisticsView :stats="stats" />
+    <StatisticsView :stats="stats" class="mb-3" />
+    <div class="charts-list">
+      <BarChart />
+      <LineChart />
+    </div>
   </div>
 </template>
 
 <script>
+import BarChart from "../components/BarChart.vue";
+import LineChart from "../components/LineChart.vue";
 import StatisticsView from "../components/StatisticsView.vue";
 export default {
-  components: { StatisticsView },
+  components: { StatisticsView, BarChart, LineChart },
   name: "DashboardView",
   data() {
     return {
