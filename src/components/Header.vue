@@ -46,6 +46,8 @@ export default {
   margin-bottom: 15px;
   .breadcrumb {
     align-items: center;
+    background-color: transparent;
+    padding: 0;
     .toggle {
       width: 30px;
       height: 30px;

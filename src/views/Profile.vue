@@ -14,124 +14,13 @@
                 Edit Profile
               </h5>
             </template>
-            <b-tab title="User Profile" active>
-              <div class="user-form">
-                <h6>User Information</h6>
-                <b-form>
-                  <b-row align-v="start" align-h="between">
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Username</p>
-                        <b-form-input v-model="user.username" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Email Address</p>
-                        <b-form-input v-model="user.email" type="email"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">First Name</p>
-                        <b-form-input v-model="user.first_name" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Last Name</p>
-                        <b-form-input v-model="user.last_name" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="12" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">About Me</p>
-                        <b-form-textarea
-                          id="textarea"
-                          v-model="user.about_me"
-                          rows="3"
-                          max-rows="6"
-                        ></b-form-textarea>
-                      </div>
-                    </b-col>
-                  </b-row>
-
-                  <hr />
-
-                  <h6>Contact Information</h6>
-                  <b-row>
-                    <b-col md="12" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Address</p>
-                        <b-form-input v-model="user.address" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="4" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">City</p>
-                        <b-form-input v-model="user.email" type="email"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="4" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Country</p>
-                        <b-form-input v-model="user.first_name" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="4" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Postal Code</p>
-                        <b-form-input v-model="user.last_name" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                  </b-row>
-                </b-form>
-              </div>
+            <b-tab title="Personal" active>
+              <PersonalForm />
             </b-tab>
             <b-tab title="Health">
-              <div class="user-form">
-                <h6>User Information</h6>
-                <b-form>
-                  <b-row align-v="start" align-h="between">
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Username</p>
-                        <b-form-input v-model="user.username" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Email Address</p>
-                        <b-form-input v-model="user.email" type="email"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">First Name</p>
-                        <b-form-input v-model="user.first_name" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="6" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">Last Name</p>
-                        <b-form-input v-model="user.last_name" type="text"></b-form-input>
-                      </div>
-                    </b-col>
-                    <b-col md="12" sm="12">
-                      <div class="form-group d-block">
-                        <p class="label">About Me</p>
-                        <b-form-textarea
-                          id="textarea"
-                          v-model="user.about_me"
-                          rows="3"
-                          max-rows="6"
-                        ></b-form-textarea>
-                      </div>
-                    </b-col>
-                  </b-row>
-                </b-form>
-              </div>
+              <HealthForm />
             </b-tab>
+            <b-tab title="Travel"><p>I'm the tab with the very, very long title</p></b-tab>
             <b-tab title="Wallet"><p>I'm the tab with the very, very long title</p></b-tab>
           </b-tabs>
         </div>
@@ -153,7 +42,10 @@
 </template>
 
 <script>
+import PersonalForm from "../components/PersonalForm.vue";
+import HealthForm from "./HealthForm.vue";
 export default {
+  components: { PersonalForm, HealthForm },
   name: "profile",
   data() {
     return {
@@ -177,13 +69,14 @@ export default {
     .tab-label {
       margin-right: auto;
     }
-    .user-form {
+
+    ::v-deep {
       .form-group {
         margin-bottom: 10px;
       }
       .label {
         margin-bottom: 5px;
-        font-size: 13px;
+        font-size: 14px;
         // font-weight: bold;
       }
     }
