@@ -5,11 +5,10 @@
 </template>
 
 <script>
-import StatisticsCard from "../components/StatisticsCard.vue";
 import StatisticsView from "../components/StatisticsView.vue";
 export default {
-  components: { StatisticsCard, StatisticsView },
-  name: "dashboard",
+  components: { StatisticsView },
+  name: "DashboardView",
   data() {
     return {
       stats: {

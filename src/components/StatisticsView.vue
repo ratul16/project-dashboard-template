@@ -45,8 +45,8 @@ export default {
   components: { StatisticsCard },
   props: {
     stats: {
-      type: Array,
-      default: () => [],
+      type: Object,
+      default: () => {},
     },
   },
   name: "StatisticsView",
