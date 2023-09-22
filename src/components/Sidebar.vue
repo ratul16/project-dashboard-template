@@ -94,6 +94,8 @@ export default {
       padding: 12px 20px;
       display: flex;
       align-items: center;
+      color: inherit;
+      transition: $transition;
       i {
         font-size: 20px;
         margin-right: 16px;
@@ -107,10 +109,10 @@ export default {
       &:hover {
         // background-color: $brand-color;
         i {
-          color: $brand-color;
+          color: $brand-color-dark;
         }
         .item-text {
-          color: $brand-color;
+          color: $brand-color-dark;
         }
       }
     }

@@ -34,24 +34,10 @@
 }
 
 .router-link-exact-active {
-  color: $white;
+  color: $white !important;
   background-color: lighten($brand-color, 10);
   font-weight: 600;
   i {
     color: $white;
   }
-}
-
-.bg-warning {
-  background-color: $yellow !important;
-}
-.bg-success {
-  background-color: $green !important;
-}
-.bg-danger {
-  background-color: $red !important;
-}
-
-.bg-hover {
-  background-color: $border-variant-5;
 }

@@ -1,7 +1,7 @@
 import { useAuthStore } from "./stores/auth";
 import Vue from "vue";
 import { createPinia, PiniaVuePlugin } from "pinia";
-import { BootstrapVue } from 'bootstrap-vue';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import App from "./App.vue";
 import router from "./router";
 
@@ -14,6 +14,7 @@ const pinia = createPinia();
 
 Vue.use(PiniaVuePlugin);
 Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 new Vue({
   pinia,
