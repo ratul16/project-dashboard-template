@@ -1,5 +1,4 @@
-import { fileURLToPath, URL } from "node:url";
-
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import vue2 from "@vitejs/plugin-vue2";
@@ -15,8 +14,13 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+    // alias: [
+    //   { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
+    //   { find: '@assets', replacement: fileURLToPath(new URL('./src/assets', import.meta.url)) },
+    //   { find: '@stores', replacement: fileURLToPath(new URL('./src/stores', import.meta.url)) },
+    // ]
   },
   css: {
     preprocessorOptions: {

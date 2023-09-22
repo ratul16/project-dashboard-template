@@ -1,7 +1,8 @@
 <template>
   <aside class="sidebar shadow-sm" :class="isVisible ? 'expanded' : ''">
     <div class="logo" @click="toggleSidebar()">
-      <img src="@/assets/images/logo.png" alt="" srcset="" />
+      <!-- need to fix asset url handling -->
+      <!-- <img src="@/assets/images/logo.png" alt="" srcset="" /> -->
       <h5 class="item-text mb-0">Dashboard</h5>
     </div>
     <ul class="navbar-nav">
