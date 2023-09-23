@@ -55,8 +55,13 @@ export default {
 
 <style lang="scss" scoped>
 .statistics-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-gap: 10px;
+  .statistics-card {
+    flex: 1;
+    min-width: 200px;
+  }
 }
 </style>
