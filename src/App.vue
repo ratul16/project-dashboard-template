@@ -1,21 +1,19 @@
 <template>
   <div id="app">
-    <Sidebar :isVisible="isVisible" />
-    <main>
-      <Header @toggleSidebar="toggleSidebar" />
-      <router-view />
-    </main>
+    <DashboardLayout v-if="$route.meta.layout" />
+    <Default v-else />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Sidebar from "./components/Sidebar.vue";
+import DashboardLayout from "./layout/DashboardLayout.vue";
+import Default from "./layout/Default.vue";
+
 export default {
   name: "App",
   components: {
-    Header,
-    Sidebar,
+    DashboardLayout,
+    Default,
   },
   data() {
     return {
@@ -31,11 +29,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
-  display: flex;
-  main {
-    flex: 1 1 0;
-    padding: 16px;
-  }
-}
 </style>

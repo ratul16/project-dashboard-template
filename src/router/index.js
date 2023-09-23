@@ -7,39 +7,42 @@ const router = new VueRouter({
   mode: "history",
   base: import.meta.env.BASE_URL,
   routes: [
-    // {
-    //   path: "/",
-    //   name: "home",
-    //   component: () => import("../views/HomeView.vue"),
-    // },
     {
       path: "/",
+      name: "home",
+      component: () => import("../views/HomeView.vue"),
+    },
+    {
+      path: "/dashboard",
       name: "dashboard",
+      meta: {
+        layout: true
+      },
       component: () => import("../views/Dashboard.vue"),
     },
     {
       path: "/booking",
       name: "booking",
       component: () => import("../views/BookingView.vue"),
-      // meta: {
-      //   requiresAuth: true,
-      // },
+      meta: {
+        layout: true
+      },
     },
     {
       path: "/billing",
       name: "billing",
       component: () => import("../views/Profile.vue"),
-      // meta: {
-      //   requiresAuth: true,
-      // },
+      meta: {
+        layout: true
+      },
     },
     {
       path: "/profile",
       name: "profile",
       component: () => import("../views/Profile.vue"),
-      // meta: {
-      //   requiresAuth: true,
-      // },
+      meta: {
+        layout: true
+      },
     },
     {
       path: "/login",
