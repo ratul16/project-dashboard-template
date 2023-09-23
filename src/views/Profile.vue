@@ -43,7 +43,7 @@
 
 <script>
 import PersonalForm from "../components/PersonalForm.vue";
-import HealthForm from "./HealthForm.vue";
+import HealthForm from "../components/HealthForm.vue";
 export default {
   components: { PersonalForm, HealthForm },
   name: "profile",
