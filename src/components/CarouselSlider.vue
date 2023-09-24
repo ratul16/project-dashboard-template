@@ -96,6 +96,7 @@ export default {
     place-items: center;
     cursor: pointer;
     background-color: rgba(85, 110, 230, 0.2);
+    transition: $transition;
 
     &::before {
       content: "";

@@ -23,7 +23,7 @@ export default {
     return {
       stats: {
         money: {
-          title: "Today's Money",
+          title: "Today's Sales",
           value: "$53,000",
           percentage: "+55",
           iconClass: "fa-solid fa-coins",
@@ -48,7 +48,7 @@ export default {
           detail: "since last quarter",
         },
         sales: {
-          title: "Sales",
+          title: "Total Sales",
           value: "$103,430",
           percentage: "+5",
           iconClass: "fa-solid fa-chart-line",

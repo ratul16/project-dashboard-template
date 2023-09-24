@@ -14,9 +14,9 @@
             </p>
             <h4 class="font-weight-bolder" :class="valueColor">{{ value }}</h4>
             <span class="text-sm" :class="percentage >= 0 ? 'text-success' : 'text-danger'"
-              >{{ percentage }}%</span
-            >
-            {{ detail }}
+              >{{ percentage }}%
+            </span>
+            <span>{{ detail }}</span>
           </div>
         </div>
       </div>
