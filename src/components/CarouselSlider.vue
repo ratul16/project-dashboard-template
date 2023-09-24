@@ -71,6 +71,7 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: bottom;
   }
   ::v-deep .carousel-caption {
     width: 100%;
@@ -106,6 +107,9 @@ export default {
       z-index: -1;
       backdrop-filter: blur(20px);
       // border-radius: 50%;
+    }
+    i {
+      color: $white;
     }
 
     &:hover {

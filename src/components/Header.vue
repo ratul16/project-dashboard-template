@@ -1,7 +1,7 @@
 <template>
   <div class="header shadow-sm">
     <div class="breadcrumb mb-0">
-      <div class="toggle" :class="toggle ? 'expanded' : ''" @click="toggleSidebar()">
+      <div class="toggle" :class="sidebar ? 'expanded' : ''" @click="toggleSidebar()">
         <i class="fa-solid fa-angle-right"></i>
       </div>
       <ol class="breadcrumb text-capitalize mb-0">
@@ -21,6 +21,12 @@
 <script>
 export default {
   name: "Header",
+  props: {
+    sidebar: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       toggle: false,

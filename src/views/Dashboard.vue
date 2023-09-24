@@ -1,9 +1,12 @@
 <template>
   <div class="dashboard">
     <StatisticsView :stats="stats" class="mb-3" />
-    <div class="charts-list">
+    <div class="charts-list mb-3">
       <BarChart />
       <LineChart />
+      <div class="slider">
+        <CarouselSlider />
+      </div>
     </div>
   </div>
 </template>
@@ -12,8 +15,9 @@
 import BarChart from "../components/BarChart.vue";
 import LineChart from "../components/LineChart.vue";
 import StatisticsView from "../components/StatisticsView.vue";
+import CarouselSlider from "../components/CarouselSlider.vue";
 export default {
-  components: { StatisticsView, BarChart, LineChart },
+  components: { StatisticsView, BarChart, LineChart, CarouselSlider },
   name: "DashboardView",
   data() {
     return {
@@ -58,4 +62,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.slider {
+  max-height: 400px;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid $brand-color-light;
+  overflow: hidden;
+  ::v-deep .carousel-caption {
+    width: 100%;
+    height: fit-content;
+    left: 0;
+    bottom: 50%;
+    padding: 30px 0;
+    background-color: rgba(29, 30, 33, 0.8);
+  }
+  .carousel-buttons {
+    bottom: 20px;
+  }
+}
 </style>

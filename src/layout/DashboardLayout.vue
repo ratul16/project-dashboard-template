@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-layout">
-    <Sidebar :isVisible="isVisible" />
+    <Sidebar :isVisible="isVisible" @toggle="toggleSidebar" />
     <main>
-      <Header @toggleSidebar="toggleSidebar" />
+      <Header @toggleSidebar="toggleSidebar" :sidebar="isVisible" />
       <router-view />
     </main>
   </div>
@@ -36,6 +36,17 @@ export default {
   main {
     flex: 1 1 0;
     padding: 16px;
+  }
+}
+
+@include media-queries("tab-sm") {
+  .dashboard-layout {
+    // display: flex;
+    // flex-direction: column;
+    main {
+      flex: 1 1 0;
+      padding: 16px;
+    }
   }
 }
 </style>

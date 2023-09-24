@@ -64,7 +64,9 @@ export default {
   },
   methods: {
     toggleSidebar() {
-      this.toggle = !this.toggle;
+      if (this.isVisible) {
+        this.$emit("toggle", false);
+      }
     },
     getImageUrl(url) {
       return new URL(url, import.meta.url).href;
@@ -75,6 +77,7 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: $brand-color-light;
@@ -86,6 +89,17 @@ export default {
   border-radius: 0 15px 15px 0;
   // border: 1px solid $border-variant-4;
   font-size: 14px;
+
+  &::before {
+    position: absolute;
+    contain: " ";
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    top: 0;
+    z-index: 100;
+    right: 0;
+  }
 
   .logo {
     display: flex;
@@ -102,6 +116,18 @@ export default {
       margin-left: 16px;
       transition: $transition;
     }
+    // .close {
+    //   width: 30px;
+    //   height: 30px;
+    //   border-radius: 50%;
+    //   display: grid;
+    //   place-items: center;
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   color: $white;
+    //   background-color: red;
+    // }
   }
 
   .navbar-nav {
@@ -149,10 +175,14 @@ export default {
   }
 }
 
-// @include media-queries("tab-sm") {
-//   .sidebar {
-//     position: absolute;
-//     z-index: 99;
-//   }
-// }
+@include media-queries("tab-sm") {
+  .sidebar {
+    position: absolute;
+    z-index: 99;
+    left: calc(-32px - $sidebar-icon-width);
+    &.expanded {
+      left: 0;
+    }
+  }
+}
 </style>
