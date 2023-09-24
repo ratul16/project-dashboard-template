@@ -9,10 +9,13 @@
         <li class="breadcrumb-item">{{ $route.name }}</li>
       </ol>
     </div>
-    <div class="right-side">
+    <div class="right-side d-flex">
       <div class="notification px-2">
         <!-- <i class="fa-solid fa-bell fa-shake"></i> -->
         <i class="fa-solid fa-bell"></i>
+      </div>
+      <div class="logout px-2">
+        <i class="fa-solid fa-right-from-bracket"></i>
       </div>
     </div>
   </div>

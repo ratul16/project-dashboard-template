@@ -25,24 +25,24 @@
           <span class="item-text">Dashboard</span>
         </router-link>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <router-link :to="{ name: 'booking' }" class="nav-link">
           <i class="fa-solid fa-folder"></i>
           <span class="item-text">Booking</span>
         </router-link>
-      </li>
+      </li> -->
       <li class="nav-item">
         <router-link :to="{ name: 'profile' }" class="nav-link">
           <i class="fa-solid fa-user"></i>
           <span class="item-text">Profile</span>
         </router-link>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <router-link :to="{ name: 'billing' }" class="nav-link">
           <i class="fa-solid fa-credit-card"></i>
           <span class="item-text">Billing</span>
         </router-link>
-      </li>
+      </li> -->
     </ul>
   </aside>
 </template>
