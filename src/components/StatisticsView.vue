@@ -55,13 +55,19 @@ export default {
 
 <style lang="scss" scoped>
 .statistics-view {
-  display: flex;
-  flex-wrap: wrap;
-  // grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: grid;
+  // flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  .statistics-card {
-    flex: 1;
-    min-width: 200px;
+}
+@include media-queries("tab") {
+  .statistics-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@include media-queries("mobile") {
+  .statistics-view {
+    grid-template-columns: 1fr;
   }
 }
 </style>

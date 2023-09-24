@@ -9,7 +9,7 @@
         </div>
         <div>
           <div class="numbers">
-            <p class="mb-0 text-uppercase font-weight-bold">
+            <p class="mb-1 text-uppercase font-weight-bold">
               {{ title }}
             </p>
             <h4 class="font-weight-bolder" :class="valueColor">{{ value }}</h4>
