@@ -2,7 +2,7 @@
   <aside class="sidebar shadow-sm" :class="isVisible ? 'expanded' : ''">
     <div class="logo" @click="toggleSidebar()">
       <!-- need to fix asset url handling -->
-      <svg viewBox="0 0 99 95">
+      <!-- <svg viewBox="0 0 99 95">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -15,7 +15,8 @@
           d="M33.8633 70.3504V67.0281L38.1611 66.2898V36.0467L33.8633 35.3084V31.9861H50.9756C53.7705 31.9861 56.126 32.408 58.042 33.2517C59.9756 34.0779 61.4434 35.282 62.4453 36.864C63.4473 38.4461 63.9482 40.3797 63.9482 42.6648C63.9482 44.9148 63.4561 46.8045 62.4717 48.3338C61.5049 49.8631 60.125 51.0232 58.332 51.8142C56.5391 52.5877 54.4121 53.0008 51.9512 53.0535L43.3555 53.2117V66.2898L47.6533 67.0281V70.3504H33.8633ZM59.2021 70.3504L50.6592 51.1814L55.8535 51.1287L62.9463 66.4744L65.6094 66.949V70.3504H59.2021ZM43.3555 49.1248H50.4482C53.3486 49.1248 55.458 48.5711 56.7764 47.4637C58.0947 46.3562 58.7539 44.739 58.7539 42.6121C58.7539 40.5906 58.1211 38.991 56.8555 37.8133C55.5898 36.6355 53.6299 36.0467 50.9756 36.0467H43.3555V49.1248Z"
           fill="#DC3545"
         />
-      </svg>
+      </svg> -->
+      <img src="@/assets/images/logo.png" alt="" srcset="" />
       <h5 class="item-text mb-0">Dashboard</h5>
     </div>
     <ul class="navbar-nav">
@@ -68,9 +69,9 @@ export default {
         this.$emit("toggle", false);
       }
     },
-    getImageUrl(url) {
-      return new URL(url, import.meta.url).href;
-    },
+    // getImageUrl(url) {
+    //   return new URL(url, import.meta.url).href;
+    // },
   },
 };
 </script>
@@ -108,6 +109,10 @@ export default {
     // max-width: 40px;
     // width: 100%;
     svg {
+      width: 40px;
+      height: 40px;
+    }
+    img {
       width: 40px;
       height: 40px;
     }
